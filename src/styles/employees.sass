@@ -1,0 +1,102 @@
+/* employees */
+  
+// layout
+#employees
+  background-color: #f3f3f3
+  .main-container
+    max-width: 1400px
+  
+// topbar
+.topbar
+  margin-bottom: 25px
+  .topbar-inner
+    justify-content: space-between
+    align-items: center
+  .topbar-title
+    .topbar-title-txt
+      font-size: 1.75rem
+      &::first-letter
+        color: $accent
+  .topbar-tools
+    width: 100%
+    max-width: 400px
+    > .row
+      margin: -5px
+      > .col
+        padding: 5px
+    .topbar-add, .topbar-search
+      height: 40px
+    .topbar-add
+      width: 100%
+    .topbar-search
+      width: 100%
+      > .v-input__control
+        > .v-input__slot
+          &::after
+            border-color: $accent
+            transform-origin: left
+
+// table
+.theme--light.v-data-table
+  > .v-data-table__wrapper
+    > table
+      > thead
+        &.v-data-table-header-mobile
+          display: none
+        > tr
+          > th
+            color: $text-color
+          &:last-child
+            > th
+              border-bottom: 3px solid $accent
+      > tbody
+        > tr
+          > td
+            color: rgba($text-color, .85)
+            a
+              word-break: break-all
+              transition: color .2s ease
+              &:hover
+                color: $accent
+            .v-btn
+              width: 1.875rem
+              height: 1.875rem
+              .v-icon
+                width: 1.125rem
+                height: 1.125rem
+                font-size: 1.125rem
+              &:hover
+                &.v-btn__modify
+                  color: map-get($indigo, 'lighten-1')
+                &.v-btn__delete
+                  color: map-get($red, 'base')
+          &:not(:last-child)
+            > td, > th
+              &:not(.v-data-table__mobile-row)
+                border: none
+          &:nth-child(even)
+            > td
+              background-color: #f7f7f7
+          &:hover
+            > td
+              background-color: rgba($accent, .1)
+              color: $text-color
+
+@media (min-width: 600px) and (max-width: 767.98px)
+  .v-data-table > .v-data-table__wrapper > table > thead > tr > th,
+  .v-data-table > .v-data-table__wrapper > table > tbody > tr > td
+    height: 45px
+    padding: 0 10px
+    font-size: .875rem
+
+// pagination
+.pagination
+  margin-top: 50px
+  > ul
+    margin: -0.3em
+  @media (max-width: 575.98px)
+    margin-top: 35px
+    
+.theme--light.v-pagination
+  .v-pagination__item--active
+    background-color: $accent

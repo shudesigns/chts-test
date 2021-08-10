@@ -1,0 +1,37 @@
+// globals
+$body-font-family: 'Source Sans Pro', 'Noto Sans TC', serif;
+$heading-font-family: 'Source Sans Pro', 'Noto Sans TC', serif;
+$font-size-root: 16px;
+$border-radius-root: 5px;
+
+// themes
+$material-light: (
+  // 'background': #f3f3f3,
+  'table': (
+    'hover': inherit
+  )
+);
+
+// app bar
+$toolbar-content-padding-x: 0;
+$toolbar-content-padding-y: 0;
+
+// table
+$data-table-regular-header-height: 55px;
+$data-table-regular-header-font-size: 1rem;
+$data-table-regular-row-height: 55px;
+$data-table-regular-row-font-size: 1rem;
+
+// buttons
+$btn-sizes: (
+  'default': 40
+);
+$btn-font-sizes: (
+  'default': 1rem,
+  'large': 1rem
+);
+$btn-letter-spacing: 0;
+
+// custom variables
+$accent: #5d83ff;
+$text-color: #151515;

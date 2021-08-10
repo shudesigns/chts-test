@@ -1,0 +1,73 @@
+/* rwd */
+  
+// layout
+#rwd
+  counter-reset: panel
+  .v-app-bar
+    .v-app-bar-title
+      font-size: 24px
+      font-weight: normal
+  .main-container
+    max-width: 1800px
+    > .custom-row
+      
+.custom-row
+  margin: -10px
+    
+// panels
+.custom-col
+  display: flex
+  padding: 10px
+  &.md
+    width: calc(74000%/1820)
+  &.lg
+    width: calc(108000%/1820)
+
+.custom-panel
+  width: 100%
+  min-height: 348px
+  background-color: #000000
+  padding: 20px
+  border-radius: 4px
+  overflow: hidden
+  counter-increment: panel
+  color: #ffffff
+  .custom-panel-head
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &::before
+      content: 'Panel ' counter(panel)
+      display: block
+      font-size: 14px
+    .v-btn
+      border-radius: 4px
+      font-size: 12px
+  .custom-panel-inner
+    margin-top: 52px
+    > .row
+      margin: -6px
+      > .col
+        padding: 6px
+        .flag
+          display: flex
+          justify-content: center
+          align-items: center
+          min-width: 200px
+          height: 220px
+          background-color: #ffffff
+          border-radius: 2px
+          overflow: hidden
+          &::before
+            content: ''
+            display: block
+            flex-shrink: 0
+            width: 200px
+            height: 200px
+            border-radius: 50%
+            background-color: #00bcd4
+        &:nth-child(even)
+          .flag
+            &::before
+              width: 100px
+              height: 100px

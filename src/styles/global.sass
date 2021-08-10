@@ -1,0 +1,40 @@
+/* global */
+  
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Source+Sans+Pro:wght@400;600;700&display=swap')
+
+// basic
+body
+  background-color: map-get($material-light, 'background')
+a
+  text-decoration: none
+  &:visited
+    color: inherit
+ul, ol
+  &.list-unstyled
+    margin: 0
+    padding: 0
+    list-style: none
+
+// reset
+.v-application
+  a
+    color: inherit
+  .error--text
+    color: #ff5252 !important
+    caret-color: #ff5252 !important
+.v-pagination__item, .v-pagination__navigation, .v-pagination__item--active
+  box-shadow: none
+
+// layout
+.main-container
+  margin: 0 auto
+  padding: 50px 0
+  @media (min-width: 1024px)
+    width: calc(100% - 120px)
+  @media (min-width: 768px) and (max-width: 1023.98px)
+    width: calc(100% - 100px)
+  @media (min-width: 576px) and (max-width: 767.98px)
+    width: calc(100% - 50px)
+  @media (max-width: 575.98px)
+    width: calc(100% - 40px)
+    padding: 25px 0 35px
