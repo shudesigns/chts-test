@@ -17,11 +17,14 @@
 .custom-col
   display: flex
   padding: 10px
-  &.md
-    width: calc(74000%/1820)
-  &.lg
-    width: calc(108000%/1820)
-
+  @media (min-width: 1024px)
+    &.md
+      width: calc(74000%/1820)
+    &.lg
+      width: calc(108000%/1820)
+  @media (max-width: 1023.98px)
+    width: 100%
+    
 .custom-panel
   width: 100%
   min-height: 348px

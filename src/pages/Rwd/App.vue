@@ -1,42 +1,54 @@
 <template lang="pug">
+  // mixins
+  mixin custom-row
+    v-row.custom-row
+      block
+  mixin custom-col
+    v-col.col-auto.custom-col&attributes(attributes)
+      block
+  mixin custom-panel
+    .custom-panel
+      if block
+        block
+      else
+        .custom-panel-head
+
+  // app
   v-app#rwd
     v-app-bar(height="80", color="#000000", dark, flat)
       .main-container.container
         h1.v-app-bar-title Logo
     v-main
       .main-container.container
-        custom-row
-          custom-col(:size="panel1.size", :cols="panel1.cols")
-            custom-panel
-              template(v-slot:head)
+        +custom-row
+          +custom-col(class="", :class="panel1.size", :cols="panel1.cols")
+            +custom-panel
+              .custom-panel-head
                 v-btn(width="72", height="28", color="#ffffff", depressed, @click="toggle") {{ toggleText }}
-              template(v-slot:inner)
+              .custom-panel-inner
                 v-row(ref="flags")
                   v-col.col(v-for="index in visibleFlags", :key="index")
                     .flag
-          custom-col(:size="panel2.size", :cols="panel2.cols")
-            custom-panel
-          custom-col(size="md")
-            custom-row
-              custom-col(cols="12")
-                custom-panel
-              custom-col(cols="12")
-                custom-panel
-          custom-col(size="lg")
-            custom-row
-              custom-col
-                custom-panel
-              custom-col
-                custom-panel
+          +custom-col(class="", :class="panel2.size", :cols="panel2.cols")
+            +custom-panel
+          +custom-col(class="md")
+            +custom-row
+              +custom-col(cols="12")
+                +custom-panel
+              +custom-col(cols="12")
+                +custom-panel
+          +custom-col(class="lg")
+            +custom-row
+              +custom-col(cols="12", lg="6")
+                +custom-panel
+              +custom-col(cols="12", lg="6")
+                +custom-panel
 </template>
 
 <style lang="sass" src="@/styles/global.sass"></style>
 <style lang="sass" src="@/styles/rwd.sass"></style>
 
 <script>
-import CustomRow from '@/components/CustomRow.vue'
-import CustomCol from '@/components/CustomCol.vue'
-import CustomPanel from '@/components/CustomPanel.vue'
 export default {
   name: 'Rwd',
   data() {
@@ -52,11 +64,6 @@ export default {
       isExpand: false,
       flagsWidth: null
     }
-  },
-  components: {
-    'custom-row': CustomRow,
-    'custom-col': CustomCol,
-    'custom-panel': CustomPanel
   },
   computed: {
     toggleText() {

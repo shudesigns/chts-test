@@ -3,9 +3,9 @@
     v-app-bar(height="50px", fixed, dark, flat).px-5
       a.d-inline-flex.align-center(href="https://github.com/shudesigns/chts-test", target="_blank") #[v-icon.mr-2 mdi-github] View on Github
     v-main
-      .main-container.container.d-flex.flex-column.justify-center.align-center
-        h1.main-title CHTS 前端工程師 實作考題
-        h2.sub-title BY 蔡書薇
+      .main-container.container.d-flex.flex-column.justify-center.align-center.text-center
+        h1.main-title CHTS 前端工程師 #[br.d-sm-none]實作考題
+        h2.sub-title.mt-3 BY 蔡書薇
         .main-links.mt-5
           ul.list-unstyled.row.justify-center
             mixin list-item(title, url)
