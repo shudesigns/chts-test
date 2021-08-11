@@ -11,9 +11,9 @@
             mixin list-item(title, url)
               li.col-auto
                 v-btn(tag="a", href=url, depressed)= title
-            +list-item('試題一', '/employees')
-            +list-item('試題二', '/rwd')
-            +list-item('試題三', '/map')
+            +list-item('試題一', './employees')
+            +list-item('試題二', './rwd')
+            +list-item('試題三', './map')
 </template>
 
 <style lang="sass" src="@/styles/global.sass"></style>
