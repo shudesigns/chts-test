@@ -4,25 +4,25 @@ module.exports = {
     'index': {
       entry: './src/pages/Home/main.js',
       template: './public/index.html',
-      title: 'Home',
+      title: '首頁',
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
     'employees': {
       entry: './src/pages/Employees/main.js',
       template: './public/index.html',
-      title: 'Employees',
+      title: '試題一',
       chunks: ['chunk-vendors', 'chunk-common', 'employees']
     },
     'rwd': {
       entry: './src/pages/Rwd/main.js',
       template: './public/index.html',
-      title: 'Rwd',
+      title: '試題二',
       chunks: ['chunk-vendors', 'chunk-common', 'rwd']
     },
     'map': {
       entry: './src/pages/Map/main.js',
       template: './public/index.html',
-      title: 'Map',
+      title: '試題三',
       chunks: ['chunk-vendors', 'chunk-common', 'map']
     }
   },
