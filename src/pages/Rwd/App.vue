@@ -30,6 +30,7 @@
                 custom-panel
 </template>
 
+<style lang="sass" src="@/styles/global.sass"></style>
 <style lang="sass" src="@/styles/rwd.sass"></style>
 
 <script>

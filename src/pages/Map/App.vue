@@ -9,6 +9,7 @@
         svg-map(v-if="mapData != null", :map="USA", :location-class="locationClass")
 </template>
 
+<style lang="sass" src="@/styles/global.sass"></style>
 <style lang="sass" src="@/styles/map.sass"></style>
 
 <script>
