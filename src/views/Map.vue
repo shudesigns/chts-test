@@ -36,7 +36,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('/data/map.json').then((res) => {
+    axios.get('https://shudesigns.github.io/chts-test/data/map.json').then((res) => {
       this.mapData = res.data
     })
   }

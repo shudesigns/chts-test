@@ -243,7 +243,7 @@ export default {
     }
   },
   mounted() {
-    axios.get('/data/employees.json').then(res => {
+    axios.get('https://shudesigns.github.io/chts-test/data/employees.json').then(res => {
       this.items = res.data
     })
   }
