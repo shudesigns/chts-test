@@ -28,7 +28,6 @@
                 custom-panel
               custom-col
                 custom-panel
-    
 </template>
 
 <style lang="sass" src="@/styles/rwd.sass"></style>
